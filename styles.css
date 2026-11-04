@@ -371,10 +371,12 @@ a {
 }
 
 .brand {
+  position: relative;
   flex: none;
-  display: block;
-  width: 150px;
-  filter: drop-shadow(0 5px 7px rgba(28, 75, 30, .12));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  filter: drop-shadow(0 5px 9px rgba(28, 75, 30, .13));
   transition: transform .2s ease;
 }
 
@@ -382,9 +384,69 @@ a {
   transform: translateY(-2px) rotate(-1deg);
 }
 
-.brand img {
+.brand-mark {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 168px;
+  padding: 5px 9px 7px;
+  border-radius: 20px 20px 17px 17px;
+  background: linear-gradient(180deg, #fffdf4 0%, #fff4c9 100%);
+  box-shadow: 0 7px 18px rgba(21, 74, 35, .14), inset 0 0 0 1px rgba(255, 255, 255, .8);
+}
+
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -9px;
+  bottom: -6px;
+  left: -9px;
+  height: 17px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--green-700), var(--lime));
+  transform: rotate(-1.5deg);
+  opacity: .92;
+}
+
+.brand-mark img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.brand-tagline {
+  position: relative;
+  padding-left: 13px;
+  color: var(--green-800);
+  font-family: "Fredoka", sans-serif;
+  font-size: .79rem;
+  font-weight: 600;
+  line-height: 1.22;
+  white-space: nowrap;
+}
+
+.brand-tagline::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--yellow);
+}
+
+.brand-tagline::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  bottom: -7px;
+  left: 13px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--yellow), rgba(246, 199, 43, 0));
+  transform: rotate(-2deg);
 }
 
 .nav {
@@ -927,6 +989,17 @@ a {
   background: var(--white);
   box-shadow: var(--shadow-md);
   transition: transform .3s cubic-bezier(.2, .75, .3, 1), box-shadow .3s ease, border-color .3s ease;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 7px;
+  background: linear-gradient(90deg, var(--accent), var(--yellow) 55%, var(--lime));
 }
 
 .product-card:hover {
@@ -1672,6 +1745,27 @@ a {
 
 .delivery-card--free::before {
   background: linear-gradient(90deg, var(--yellow), #eda511);
+}
+
+.delivery-step {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-family: "Fredoka", sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.delivery-card--free .delivery-step {
+  background: #fff0ad;
+  color: #a97500;
 }
 
 .delivery-icon {
@@ -2586,6 +2680,14 @@ a {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 150px;
+  }
+
   .nav a {
     padding-inline: 9px;
     font-size: .86rem;
@@ -2644,8 +2746,8 @@ a {
     --header-h: 72px;
   }
 
-  .brand {
-    width: 132px;
+  .brand-mark {
+    width: 140px;
   }
 
   .header-inner {
@@ -3099,8 +3201,10 @@ a {
 }
 
 @media (max-width: 480px) {
-  .brand {
-    width: 112px;
+  .brand-mark {
+    width: 118px;
+    padding: 4px 7px 6px;
+    border-radius: 16px 16px 14px 14px;
   }
 
   .bag-button {

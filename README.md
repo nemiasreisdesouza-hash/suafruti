@@ -4,8 +4,10 @@ Site de cardápio estático, responsivo e com identidade exclusiva da **Suafruti
 
 ## Identidade visual
 
-- **Logo oficial Suafruti** aplicada no cabeçalho, no hero e no rodapé (versão recortada, otimizada e sem fundo, derivada do arquivo oficial em alta resolução).
+- **Logo oficial Suafruti** aplicada no cabeçalho, no hero e no rodapé em versão limpa, recortada com transparência suave e sem contorno branco (`assets/logo-suafruti-clean.webp` e `logo-suafruti-clean-compact.webp`), derivada do arquivo oficial em alta resolução.
+- No cabeçalho, a marca ganhou um **selo creme com sombra verde** e o slogan *"O melhor sabor da natureza."* ao lado, reforçando a identidade sem poluir o menu.
 - A versão quadrada da logo enviada pela cliente também está em `assets/logo-oficial-quadrada.jpg` e é usada como imagem de compartilhamento (`og:image`).
+- `styles.css` e `app.js` são carregados com versionamento (`?v=5`) para evitar que o navegador use uma folha de estilo antiga em cache.
 - Fotos reais dos potes extraídas do encarte oficial + imagem exclusiva da caixa com 4 bandejas de morango.
 - Paleta verde/vermelho/amarelo, tipografias locais (Fredoka, Nunito Sans e Pacifico), folhas, ondas e detalhes inspirados no material da cliente. Nenhuma dependência externa em tempo de execução.
 
