@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#075c2c">
+  <meta name="description" content="Cardápio online da Suafruti: salada de frutas, overnight e fruta cortada em potes de 250 ml e 300 ml, além da caixa com 4 bandejas de morango. Escolha, monte a sacolinha e peça pelo WhatsApp.">
+  <meta property="og:title" content="Suafruti | Sua pausa mais gostosa e natural!">
+  <meta property="og:description" content="Potes de 250 ml e 300 ml, caixa de morango com 4 bandejas e taxa de entrega por região. Monte sua sacolinha e peça pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo-social.jpg">
+  <meta name="twitter:image" content="assets/logo-social.jpg">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/fredoka-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/nunito-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=8">
+  <title>Suafruti | Cardápio e pedidos pelo WhatsApp</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="app.js?v=8" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#cardapio">Pular para o cardápio</a>
+
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-whatsapp" viewBox="0 0 16 16">
+      <path fill="currentColor" d="M13.601 2.326A7.85 7.85 0 0 0 7.984 0C3.54 0 .001 3.54.001 7.985c0 1.408.368 2.783 1.067 3.993L0 16l4.1-1.076a7.94 7.94 0 0 0 3.884.99h.003c4.444 0 7.983-3.54 7.983-7.985a7.93 7.93 0 0 0-2.369-5.603ZM7.987 14.52a6.55 6.55 0 0 1-3.335-.913l-.24-.142-2.434.638.65-2.372-.156-.247a6.53 6.53 0 0 1-1.002-3.5c0-3.616 2.942-6.557 6.557-6.557a6.52 6.52 0 0 1 4.63 1.918 6.5 6.5 0 0 1 1.918 4.63c0 3.616-2.942 6.558-6.558 6.558Zm3.595-4.912c-.197-.099-1.165-.575-1.345-.64-.18-.065-.311-.099-.442.099-.131.197-.507.64-.622.771-.114.132-.229.148-.426.05-.197-.1-.832-.307-1.585-.978-.586-.522-.981-1.166-1.096-1.363-.114-.197-.012-.304.087-.402.089-.089.197-.229.296-.344.099-.114.131-.197.197-.328.065-.132.033-.247-.017-.346-.05-.099-.442-1.067-.606-1.462-.16-.386-.322-.334-.442-.34l-.377-.007c-.131 0-.344.049-.524.247-.18.197-.688.673-.688 1.64s.704 1.903.802 2.035c.099.132 1.385 2.113 3.355 2.963.469.203.835.324 1.12.414.47.15.898.129 1.236.078.377-.057 1.165-.476 1.329-.936.164-.46.164-.854.115-.936-.05-.083-.18-.132-.377-.231Z"/>
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4.5 8h15l-1 12h-13l-1-12Z"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M8.5 9V6.5a3.5 3.5 0 0 1 7 0V9"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13m-5-5 5 5-5 5"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20.5 16.8v2.5a1.7 1.7 0 0 1-1.9 1.7 17 17 0 0 1-7.4-2.6 16.7 16.7 0 0 1-5.1-5.1A17 17 0 0 1 3.5 5.9 1.7 1.7 0 0 1 5.2 4h2.5a1.7 1.7 0 0 1 1.7 1.5c.1.9.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-1 1a13.5 13.5 0 0 0 5.1 5.1l1-1a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.5 1.7Z"/>
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M3.5 12h17M12 3c2.5 2.5 3.7 5.5 3.7 9S14.5 18.5 12 21c-2.5-2.5-3.7-5.5-3.7-9S9.5 5.5 12 3Z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-leaf" viewBox="0 0 64 64">
+      <path fill="currentColor" d="M58 5C29 5 7 17 7 38a18 18 0 0 0 18 18C46 56 58 33 58 5Z"/>
+      <path fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2.5" stroke-linecap="round" d="M14 50C25 38 37 27 51 17"/>
+    </symbol>
+    <symbol id="icon-spark" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 1.8 14.2 9l7.2 2.2-7.2 2.2L12 20.6 9.8 13.4 2.6 11.2 9.8 9 12 1.8Z"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/>
+      <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/>
+    </symbol>
+    <symbol id="icon-bike" viewBox="0 0 24 24">
+      <circle cx="5.5" cy="17.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18.5" cy="17.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 17.5h8M5.5 17.5l2-7h4l2 7M11.5 10.5 13.5 5h3l2 5.5M15.5 5h2.5"/>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" d="M12 5v14M5 12h14"/>
+    </symbol>
+    <symbol id="icon-minus" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" d="M5 12h14"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Suafruti — O melhor sabor da natureza. Voltar ao início">
+        <span class="brand-mark">
+          <img src="assets/logo-suafruti-transparente.webp" width="994" height="846" alt="Logo oficial Suafruti">
+        </span>
+        <span class="brand-tagline">O melhor sabor<br>da natureza.</span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Navegação principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#adicionais">Adicionais</a>
+        <a href="#entrega">Entrega</a>
+        <a href="#como-pedir">Como pedir</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button bag-button" type="button" data-open-cart aria-label="Abrir minha sacolinha">
+          <svg aria-hidden="true"><use href="#icon-bag"></use></svg>
+          <span class="bag-count" data-cart-count aria-hidden="true">0</span>
+        </button>
+        <a class="btn btn-wa header-wa" data-default-wa href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+          <span>Fazer pedido</span>
+        </a>
+        <a class="icon-button wa-round" data-default-wa href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" aria-label="Fazer pedido pelo WhatsApp">
+          <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+        </a>
+        <button class="icon-button menu-toggle" type="button" aria-label="Abrir menu" aria-controls="primary-nav" aria-expanded="false">
+          <svg aria-hidden="true"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-dots" aria-hidden="true"></div>
+      <div class="leaf leaf-hero-1" aria-hidden="true"></div>
+      <div class="leaf leaf-hero-2" aria-hidden="true"></div>
+      <div class="leaf leaf-hero-3" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Fruta fresquinha, pedido sem complicação</p>
+          <h1 id="hero-title">
+            <span class="hero-script">Sua pausa mais</span>
+            <span class="hero-gostosa">Gostosa
+              <svg viewBox="0 0 300 28" aria-hidden="true" preserveAspectRatio="none"><path d="M5 20C70 4 222 1 295 13" fill="none" stroke="#f6c72b" stroke-width="11" stroke-linecap="round"/></svg>
+            </span>
+            <span class="hero-natural">e natural!</span>
+          </h1>
+          <p class="hero-lead">Potes de <strong>250 ml</strong> e <strong>300 ml</strong>, caixa com <strong>4 bandejas de morango</strong> e entrega grátis em Jesus de Nazareth. Escolha aqui e confirme tudo no WhatsApp.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cardapio">
+              Ver o cardápio
+              <svg aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </a>
+            <a class="btn btn-wa" data-default-wa href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+              Pedir no WhatsApp
+            </a>
+          </div>
+
+          <ul class="hero-highlights" aria-label="Destaques da Suafruti">
+            <li><span class="highlight-icon"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span> 250 e 300 ml</li>
+            <li><span class="highlight-icon"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span> 4 bandejas por caixa</li>
+            <li><span class="highlight-icon"><svg aria-hidden="true"><use href="#icon-check"></use></svg></span> Grátis em Jesus de Nazareth</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="hero-ring" aria-hidden="true"></div>
+          <img class="hero-logo" src="assets/logo-suafruti-transparente.webp" width="994" height="846" alt="Logo oficial da Suafruti com frutas e a frase: O melhor sabor da natureza" fetchpriority="high">
+          <div class="hero-badge badge-natural" aria-hidden="true"><strong>100%</strong><span>natural</span></div>
+          <div class="hero-badge badge-pote" aria-hidden="true"><strong>2</strong><span>tamanhos<br>de pote</span></div>
+          <svg class="hero-swoosh" viewBox="0 0 420 70" aria-hidden="true"><path d="M8 54C105 8 305 2 410 33" fill="none" stroke="#8fc31f" stroke-width="10" stroke-linecap="round"/><path d="M52 64C145 30 293 20 390 43" fill="none" stroke="#f6c72b" stroke-width="5" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 130" preserveAspectRatio="none"><path d="M0 68C220 126 405 8 720 58c300 48 504-35 720 14v58H0Z" fill="#fffdf2"/></svg>
+      </div>
+    </section>
+
+    <section class="fruit-strip" aria-label="Ingredientes fresquinhos da Suafruti">
+      <div class="fruit-strip-track">
+        <span>Uva verde</span><i></i><span>Uva preta</span><i></i><span>Morango</span><i></i><span>Kiwi</span><i></i><span>Manga</span><i></i><span>Banana</span><i></i><span>Maçã</span><i></i><span>Mamão</span><i></i>
+        <span aria-hidden="true">Uva verde</span><i aria-hidden="true"></i><span aria-hidden="true">Uva preta</span><i aria-hidden="true"></i><span aria-hidden="true">Morango</span><i aria-hidden="true"></i><span aria-hidden="true">Kiwi</span><i aria-hidden="true"></i><span aria-hidden="true">Manga</span><i aria-hidden="true"></i><span aria-hidden="true">Banana</span><i aria-hidden="true"></i><span aria-hidden="true">Maçã</span><i aria-hidden="true"></i><span aria-hidden="true">Mamão</span><i aria-hidden="true"></i>
+      </div>
+    </section>
+
+    <section class="menu-section" id="cardapio" aria-labelledby="menu-title">
+      <div class="leaf leaf-menu-1" aria-hidden="true"></div>
+      <div class="leaf leaf-menu-2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker"><svg aria-hidden="true"><use href="#icon-spark"></use></svg> Cardápio Suafruti</p>
+          <h2 id="menu-title">Qual fresquinho vai <em>adoçar</em> o seu dia?</h2>
+          <p>Saladas e fruta cortada em potes de 250 ml ou 300 ml, além da caixa com 4 bandejas de morango. Escolha a opção, o tamanho e peça pelo WhatsApp.</p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filtrar o cardápio">
+          <button class="filter is-active" type="button" data-filter="todos" aria-pressed="true">Tudo</button>
+          <button class="filter" type="button" data-filter="salada" aria-pressed="false">Saladas</button>
+          <button class="filter" type="button" data-filter="fruta" aria-pressed="false">Fruta cortada</button>
+          <button class="filter" type="button" data-filter="caixa" aria-pressed="false">Caixas de morango</button>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+          <article class="product-card product-card--salada reveal" data-category="salada" data-product-id="salada" aria-labelledby="product-salada-title">
+            <div class="product-media">
+              <span class="product-label">8 frutas no pote</span>
+              <picture>
+                <source srcset="assets/produto-salada-tradicional.webp" type="image/webp">
+                <img src="assets/produto-salada-tradicional.png" width="350" height="312" alt="Pote de salada de frutas tradicional com uva, morango, kiwi, manga, banana e mamão" decoding="async">
+              </picture>
+              <div class="price-sticker" aria-live="polite"><small>R$</small><strong data-product-price>15,00</strong><span data-product-unit>300 ml</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-title-row">
+                <h3 id="product-salada-title">Salada de Frutas Tradicional</h3>
+                <span class="volume">250 / 300 ml</span>
+              </div>
+              <p class="product-desc">O clássico colorido da Suafruti: uma colherada de cada sabor da natureza.</p>
+
+              <div class="variant-picker">
+                <p class="variant-picker-label">Escolha o tamanho</p>
+                <div class="variant-options" data-option-group="size">
+                  <button class="variant-option" type="button" data-option="250" aria-pressed="false"><span>250 ml</span><b>R$ 12,00</b></button>
+                  <button class="variant-option is-selected" type="button" data-option="300" aria-pressed="true"><span>300 ml</span><b>R$ 15,00</b></button>
+                </div>
+              </div>
+
+              <div class="detail-block">
+                <p class="detail-label">Ingredientes</p>
+                <ul class="chips" aria-label="Ingredientes da salada de frutas">
+                  <li>Uva verde</li><li>Uva preta</li><li>Morango</li><li>Kiwi</li><li>Manga</li><li>Banana</li><li>Maçã</li><li>Mamão</li>
+                </ul>
+              </div>
+
+              <div class="detail-block">
+                <p class="detail-label">Adicionais</p>
+                <ul class="chips chips-addons" aria-label="Adicionais da salada de frutas">
+                  <li>Leite condensado</li><li>Leite em pó</li><li>Mel</li><li>Granola</li><li>Mousse de maracujá</li><li>Mousse de morango</li>
+                </ul>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-add" type="button" data-add="salada-300">
+                  <svg aria-hidden="true"><use href="#icon-plus"></use></svg> Sacolinha
+                </button>
+                <a class="btn btn-product-wa" data-product-wa="salada" href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20pedir%20a%20Salada%20de%20Frutas%20Tradicional." target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg> Pedir este
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card--overnight reveal" data-category="salada" data-product-id="overnight" aria-labelledby="product-overnight-title">
+            <div class="product-media">
+              <span class="product-label">Cremoso + crocante</span>
+              <picture>
+                <source srcset="assets/produto-overnight.webp" type="image/webp">
+                <img src="assets/produto-overnight.png" width="317" height="312" alt="Pote de overnight com iogurte, chia, granola, morango, kiwi e frutas" decoding="async">
+              </picture>
+              <div class="price-sticker" aria-live="polite"><small>R$</small><strong data-product-price>20,00</strong><span data-product-unit>300 ml</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-title-row">
+                <h3 id="product-overnight-title">Salada Overnight</h3>
+                <span class="volume">250 / 300 ml</span>
+              </div>
+              <p class="product-desc">Camadas cremosas, frutas fresquinhas e a crocância da granola para começar bem.</p>
+
+              <div class="variant-picker">
+                <p class="variant-picker-label">Escolha o tamanho</p>
+                <div class="variant-options" data-option-group="size">
+                  <button class="variant-option" type="button" data-option="250" aria-pressed="false"><span>250 ml</span><b>R$ 18,00</b></button>
+                  <button class="variant-option is-selected" type="button" data-option="300" aria-pressed="true"><span>300 ml</span><b>R$ 20,00</b></button>
+                </div>
+              </div>
+
+              <div class="detail-block">
+                <p class="detail-label">Ingredientes</p>
+                <ul class="chips" aria-label="Ingredientes do overnight">
+                  <li>Uva verde</li><li>Uva preta</li><li>Morango</li><li>Kiwi</li><li>Manga</li><li>Banana</li><li>Maçã</li><li>Mamão</li>
+                </ul>
+              </div>
+
+              <div class="detail-block">
+                <p class="detail-label">Adicionais</p>
+                <ul class="chips chips-addons" aria-label="Adicionais do overnight">
+                  <li>Iogurte natural</li><li>Chia</li><li>Granola</li><li>Mel</li><li>Aveia</li>
+                </ul>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-add" type="button" data-add="overnight-300">
+                  <svg aria-hidden="true"><use href="#icon-plus"></use></svg> Sacolinha
+                </button>
+                <a class="btn btn-product-wa" data-product-wa="overnight" href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20pedir%20a%20Salada%20Overnight." target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg> Pedir este
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card--fruta reveal" data-category="fruta" data-product-id="fruta" aria-labelledby="product-fruta-title">
+            <div class="product-media">
+              <span class="product-label">1 fruta por pote</span>
+              <picture>
+                <source srcset="assets/produto-uma-fruta.webp" type="image/webp">
+                <img src="assets/produto-uma-fruta.png" width="320" height="312" alt="Pote repleto de morangos frescos cortados, representando a fruta cortada" decoding="async">
+              </picture>
+              <div class="price-sticker" aria-live="polite"><small>R$</small><strong data-product-price>10,00</strong><span data-product-unit>300 ml</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-title-row">
+                <h3 id="product-fruta-title">Fruta Cortada <small>(Escolha a sua!)</small></h3>
+                <span class="volume">250 / 300 ml</span>
+              </div>
+              <p class="product-desc">Um pote só com a fruta que você mais gosta. Simples, fresco e do seu jeito.</p>
+
+              <div class="variant-picker">
+                <p class="variant-picker-label">Escolha 1 fruta</p>
+                <div class="variant-options variant-options--flavors" data-option-group="flavor">
+                  <button class="variant-option is-selected" type="button" data-option="morango" aria-pressed="true"><span>Morango</span></button>
+                  <button class="variant-option" type="button" data-option="manga" aria-pressed="false"><span>Manga</span></button>
+                  <button class="variant-option" type="button" data-option="mamao" aria-pressed="false"><span>Mamão</span></button>
+                </div>
+              </div>
+
+              <div class="variant-picker">
+                <p class="variant-picker-label">Escolha o tamanho</p>
+                <div class="variant-options" data-option-group="size">
+                  <button class="variant-option" type="button" data-option="250" aria-pressed="false"><span>250 ml</span><b>R$ 8,00</b></button>
+                  <button class="variant-option is-selected" type="button" data-option="300" aria-pressed="true"><span>300 ml</span><b>R$ 10,00</b></button>
+                </div>
+              </div>
+
+              <div class="detail-block">
+                <p class="detail-label">Como funciona</p>
+                <p class="detail-text">Somente uma opção de fruta por pote: morango, manga ou mamão. Sem mistura.</p>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-add" type="button" data-add="fruta-morango-300">
+                  <svg aria-hidden="true"><use href="#icon-plus"></use></svg> Sacolinha
+                </button>
+                <a class="btn btn-product-wa" data-product-wa="fruta" href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20pedir%20o%20pote%20de%20Fruta%20Cortada." target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg> Pedir este
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card--caixa reveal" data-category="caixa" data-product-id="caixa" aria-labelledby="product-caixa-title">
+            <div class="product-media">
+              <span class="product-label">4 bandejas na caixa</span>
+              <picture>
+                <source srcset="assets/produto-caixa-morango.webp" type="image/webp">
+                <img src="assets/produto-caixa-morango.png" width="760" height="609" alt="Caixa verde com quatro bandejas de morangos frescos" decoding="async">
+              </picture>
+              <div class="price-sticker" aria-live="polite"><small>R$</small><strong data-product-price>40,00</strong><span data-product-unit>a caixa</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-title-row">
+                <h3 id="product-caixa-title">Caixa de Morango <small>Com 4 bandejas</small></h3>
+                <span class="volume">4 bandejas</span>
+              </div>
+              <p class="product-desc">Morangos selecionados em quatro bandejas: mais sabor para a semana inteira, para dividir ou presentear.</p>
+
+              <div class="variant-picker">
+                <p class="variant-picker-label">Escolha o tipo de morango</p>
+                <div class="variant-options" data-option-group="type">
+                  <button class="variant-option is-selected" type="button" data-option="medio" aria-pressed="true"><span>Morango médio</span><b>R$ 40,00</b></button>
+                  <button class="variant-option" type="button" data-option="grauda" aria-pressed="false"><span>Morango graúdo</span><b>R$ 45,00</b></button>
+                </div>
+              </div>
+
+              <div class="detail-block">
+                <p class="detail-label">O que vem na caixa</p>
+                <ul class="chips" aria-label="Conteúdo da caixa de morango">
+                  <li>4 bandejas</li><li>Morangos fresquinhos</li><li>Do seu tamanho</li>
+                </ul>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn btn-add" type="button" data-add="caixa-medio">
+                  <svg aria-hidden="true"><use href="#icon-plus"></use></svg> Sacolinha
+                </button>
+                <a class="btn btn-product-wa" data-product-wa="caixa" href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20pedir%20a%20Caixa%20de%20Morango." target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg> Pedir este
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="menu-note reveal">
+          <svg aria-hidden="true"><use href="#icon-spark"></use></svg>
+          <span><strong>Pedido do seu jeito:</strong> escolha tamanho, fruta ou tipo de morango. Adicionais, disponibilidade e taxa de entrega são confirmados no WhatsApp.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="customize-section" id="adicionais" aria-labelledby="customize-title">
+      <div class="container customize-grid">
+        <div class="customize-copy reveal">
+          <p class="section-kicker section-kicker--light"><svg aria-hidden="true"><use href="#icon-spark"></use></svg> A base de tudo</p>
+          <h2 id="customize-title">Tem <em>natureza</em> em cada colherada.</h2>
+          <p>As saladas Tradicional e Overnight levam a mesma combinação fresquinha de oito frutas. Depois, é só escolher os adicionais que deixam o pote com a sua cara.</p>
+          <div class="fruit-count"><strong>8</strong><span>frutas na<br>combinação</span></div>
+        </div>
+
+        <div class="addons-grid reveal">
+          <article class="addon-card">
+            <div class="addon-card-head"><span class="addon-number">01</span><h3>Ingredientes da Salada de Frutas</h3></div>
+            <ul class="addon-list">
+              <li>Uva verde</li><li>Uva preta</li><li>Morango</li><li>Kiwi</li><li>Manga</li><li>Banana</li><li>Maçã</li><li>Mamão</li>
+            </ul>
+            <div class="addon-divider"><span>Adicionais</span></div>
+            <p class="addon-line">Leite condensado <b>•</b> Leite em pó <b>•</b> Mel <b>•</b> Granola <b>•</b> Mousse de maracujá <b>•</b> Mousse de morango</p>
+          </article>
+
+          <article class="addon-card">
+            <div class="addon-card-head"><span class="addon-number">02</span><h3>Ingredientes do Overnight</h3></div>
+            <ul class="addon-list">
+              <li>Uva verde</li><li>Uva preta</li><li>Morango</li><li>Kiwi</li><li>Manga</li><li>Banana</li><li>Maçã</li><li>Mamão</li>
+            </ul>
+            <div class="addon-divider"><span>Adicionais</span></div>
+            <p class="addon-line">Iogurte natural <b>•</b> Chia <b>•</b> Granola <b>•</b> Mel <b>•</b> Aveia</p>
+          </article>
+        </div>
+      </div>
+      <p class="customize-script" aria-hidden="true">Sua fruta, sempre fresquinha!</p>
+    </section>
+
+    <section class="delivery-section" id="entrega" aria-labelledby="delivery-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker"><svg aria-hidden="true"><use href="#icon-bike"></use></svg> Entrega Suafruti</p>
+          <h2 id="delivery-title">Fresquinho até você, com taxa <em>transparente</em>.</h2>
+          <p>O valor da entrega muda conforme a região. Selecione a sua na sacolinha e o total estimado aparece antes de enviar o pedido.</p>
+        </div>
+
+        <div class="delivery-grid reveal">
+          <article class="delivery-card delivery-card--free">
+            <span class="delivery-step">01</span>
+            <span class="delivery-icon"><svg aria-hidden="true"><use href="#icon-pin"></use></svg></span>
+            <p class="delivery-region">Jesus de Nazareth</p>
+            <strong class="delivery-price">Grátis</strong>
+            <p class="delivery-note">Entrega sem taxa no bairro.</p>
+            <span class="delivery-tag">Bairro da Suafruti</span>
+          </article>
+
+          <article class="delivery-card">
+            <span class="delivery-step">02</span>
+            <span class="delivery-icon"><svg aria-hidden="true"><use href="#icon-pin"></use></svg></span>
+            <p class="delivery-region">Vitória</p>
+            <strong class="delivery-price">R$ 3,00</strong>
+            <p class="delivery-note">Demais bairros da capital.</p>
+          </article>
+
+          <article class="delivery-card">
+            <span class="delivery-step">03</span>
+            <span class="delivery-icon"><svg aria-hidden="true"><use href="#icon-bike"></use></svg></span>
+            <p class="delivery-region">Vila Velha • Serra • Cariacica</p>
+            <strong class="delivery-price">R$ 5,00</strong>
+            <p class="delivery-note">Região metropolitana.</p>
+          </article>
+        </div>
+
+        <p class="delivery-footnote reveal">
+          <svg aria-hidden="true"><use href="#icon-spark"></use></svg>
+          <span>Para outras localidades, consulte a equipe. A taxa é confirmada junto com o pedido no WhatsApp.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="how-section" id="como-pedir" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker"><svg aria-hidden="true"><use href="#icon-spark"></use></svg> Sem complicação</p>
+          <h2 id="how-title">Da vontade ao pote em <em>3 passos</em></h2>
+          <p>Monte a sua sacolinha aqui e finalize a conversa onde a Suafruti já atende: no WhatsApp.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-number">01</span>
+            <div class="step-icon"><svg aria-hidden="true"><use href="#icon-bag"></use></svg></div>
+            <h3>Escolha os produtos</h3>
+            <p>Selecione o tamanho, a fruta ou o tipo de morango e use <strong>Sacolinha</strong> para adicionar quantos quiser.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">02</span>
+            <div class="step-icon"><svg aria-hidden="true"><use href="#icon-leaf"></use></svg></div>
+            <h3>Deixe do seu jeito</h3>
+            <p>Informe seu nome, entrega ou retirada, a região para calcular a taxa e conte quais adicionais deseja.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">03</span>
+            <div class="step-icon"><svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg></div>
+            <h3>Confirme no WhatsApp</h3>
+            <p>Enviamos a mensagem pronta com o resumo e o total estimado para a equipe confirmar os detalhes.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="leaf leaf-cta-1" aria-hidden="true"></div>
+      <div class="leaf leaf-cta-2" aria-hidden="true"></div>
+      <div class="container cta-inner reveal">
+        <div>
+          <p class="cta-kicker">Bateu a vontade?</p>
+          <h2 id="cta-title">Sua fruta, sempre <em>fresquinha!</em></h2>
+          <p>Chame a Suafruti e peça seu pote ou sua caixa de morangos. Entrega grátis em Jesus de Nazareth.</p>
+        </div>
+        <a class="btn btn-cta" data-default-wa href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+          Chamar no WhatsApp
+          <svg aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-card">
+          <img src="assets/logo-suafruti-transparente.webp" width="994" height="846" alt="Logo oficial Suafruti" decoding="async">
+        </div>
+        <p>O melhor sabor da natureza em potes de 250 ml e 300 ml, fruta cortada e caixas com 4 bandejas de morango.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h2>Fale com a Suafruti</h2>
+        <a href="tel:+5527992822534"><svg aria-hidden="true"><use href="#icon-phone"></use></svg> <span>(27)&nbsp;99282&#8209;2534</span></a>
+        <a href="https://www.suafruti.com.br" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#icon-globe"></use></svg> <span>www.suafruti.com.br</span></a>
+        <a href="https://www.instagram.com/suafruti/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#icon-instagram"></use></svg> <span>@suafruti</span></a>
+      </div>
+
+      <div class="footer-order">
+        <h2>Peça pelo WhatsApp</h2>
+        <p>Escolha seus potes e caixas, informe sua região de entrega e envie o pedido em poucos toques.</p>
+        <a class="btn btn-wa" data-default-wa href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg> Fazer pedido
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Suafruti. O melhor sabor da natureza.</p>
+      <p>Cardápio digital • Pedidos confirmados pelo WhatsApp</p>
+    </div>
+  </footer>
+
+  <a class="floating-wa" data-default-wa href="https://wa.me/5527992822534?text=Ol%C3%A1%2C%20Suafruti!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp da Suafruti">
+    <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+  </a>
+
+  <div class="mobile-cart-bar" id="mobile-cart-bar" aria-hidden="true" inert>
+    <button class="mobile-cart-summary" type="button" data-open-cart>
+      <span class="mobile-cart-icon"><svg aria-hidden="true"><use href="#icon-bag"></use></svg><b data-cart-count-mobile>0</b></span>
+      <span class="mobile-cart-label"><small>Minha sacolinha</small><strong>Ver meu pedido</strong></span>
+      <span class="mobile-cart-total" data-cart-total-mobile>R$ 0,00</span>
+    </button>
+  </div>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+    <header class="cart-header">
+      <div>
+        <p class="cart-kicker">Pedido Suafruti</p>
+        <h2 id="cart-title">Minha sacolinha <svg class="cart-title-icon" aria-hidden="true"><use href="#icon-bag"></use></svg></h2>
+      </div>
+      <button class="icon-button cart-close" type="button" data-close-cart aria-label="Fechar sacolinha">
+        <svg aria-hidden="true"><use href="#icon-close"></use></svg>
+      </button>
+    </header>
+
+    <div class="cart-main">
+      <div class="cart-items" id="cart-items" aria-live="polite"></div>
+
+      <form class="cart-form" id="cart-form">
+        <h3>Últimos detalhes</h3>
+        <label for="customer-name">Seu nome <span>*</span></label>
+        <input id="customer-name" name="customerName" type="text" autocomplete="name" maxlength="60" placeholder="Como podemos te chamar?" required>
+
+        <fieldset>
+          <legend>Como quer receber?</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="delivery" value="Entrega" checked> <span>Entrega</span></label>
+            <label><input type="radio" name="delivery" value="Retirada"> <span>Retirada</span></label>
+            <label><input type="radio" name="delivery" value="A combinar"> <span>A combinar</span></label>
+          </div>
+        </fieldset>
+
+        <div class="delivery-details" id="delivery-details">
+          <label for="delivery-zone">Região da entrega <span>*</span></label>
+          <select id="delivery-zone" name="deliveryZone" required>
+            <option value="">Selecione sua região</option>
+            <option value="jesus">Jesus de Nazareth — grátis</option>
+            <option value="vitoria">Vitória (demais bairros) — R$ 3,00</option>
+            <option value="metropolitana">Vila Velha / Serra / Cariacica — R$ 5,00</option>
+            <option value="outra">Outra localidade — a combinar</option>
+          </select>
+        </div>
+
+        <div class="address-field" id="address-field">
+          <label for="customer-address">Endereço de entrega <span>*</span></label>
+          <input id="customer-address" name="customerAddress" type="text" autocomplete="address-line1" maxlength="140" placeholder="Rua, número, bairro e referência">
+        </div>
+
+        <label for="customer-notes">Observações e adicionais</label>
+        <textarea id="customer-notes" name="customerNotes" rows="3" maxlength="300" placeholder="Ex.: adicionar granola, sem mel, horário desejado..."></textarea>
+      </form>
+    </div>
+
+    <footer class="cart-footer">
+      <div class="cart-total-row cart-subtotal-row">
+        <span>Subtotal dos produtos <small data-cart-count-text>0 itens</small></span>
+        <strong data-cart-total>R$ 0,00</strong>
+      </div>
+      <div class="cart-fee-row">
+        <span>Taxa de entrega <small data-fee-note>Escolha a região</small></span>
+        <strong data-cart-fee>A combinar</strong>
+      </div>
+      <div class="cart-total-row cart-grand-total">
+        <span>Total estimado</span>
+        <strong data-cart-grand-total>R$ 0,00</strong>
+      </div>
+      <button class="btn btn-wa cart-submit" type="submit" form="cart-form">
+        <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+        Enviar pedido no WhatsApp
+      </button>
+      <button class="cart-clear" type="button" data-clear-cart>Esvaziar sacolinha</button>
+      <p class="cart-disclaimer">Taxa calculada pela região selecionada. Adicionais, disponibilidade e prazo são confirmados pela equipe no WhatsApp.</p>
+    </footer>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript-note">Os botões de WhatsApp funcionam sem JavaScript. Ative o JavaScript para escolher tamanhos, frutas, tipos de morango e usar a sacolinha de pedidos.</div>
+  </noscript>
+</body>
+</html>
