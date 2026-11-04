@@ -388,8 +388,10 @@ a {
   position: relative;
   z-index: 1;
   display: block;
+  box-sizing: border-box;
   width: 168px;
-  padding: 5px 9px 7px;
+  height: 64px;
+  padding: 5px 9px;
   border-radius: 20px 20px 17px 17px;
   background: linear-gradient(180deg, #fffdf4 0%, #fff4c9 100%);
   box-shadow: 0 7px 18px rgba(21, 74, 35, .14), inset 0 0 0 1px rgba(255, 255, 255, .8);
@@ -412,7 +414,9 @@ a {
 .brand-mark img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 52px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .brand-tagline {
@@ -757,7 +761,9 @@ a {
   position: relative;
   z-index: 2;
   width: min(108%, 620px);
-  height: auto;
+  height: 400px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
   filter: drop-shadow(0 24px 24px rgba(73, 84, 24, .16));
   animation: hero-float 6s ease-in-out infinite;
 }
@@ -2056,7 +2062,10 @@ a {
 }
 
 .footer-logo-card {
+  display: block;
+  box-sizing: border-box;
   width: min(100%, 275px);
+  height: 118px;
   padding: 12px 14px;
   border-radius: 22px;
   background: #fff9dc;
@@ -2064,8 +2073,11 @@ a {
 }
 
 .footer-logo-card img {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 94px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .footer-brand > p {
@@ -2686,6 +2698,11 @@ a {
 
   .brand-mark {
     width: 150px;
+    height: 60px;
+  }
+
+  .brand-mark img {
+    height: 50px;
   }
 
   .nav a {
@@ -2748,6 +2765,11 @@ a {
 
   .brand-mark {
     width: 140px;
+    height: 58px;
+  }
+
+  .brand-mark img {
+    height: 48px;
   }
 
   .header-inner {
@@ -2839,6 +2861,7 @@ a {
 
   .hero-logo {
     width: min(100%, 520px);
+    height: 340px;
   }
 
   .hero-glow {
@@ -2918,6 +2941,7 @@ a {
 
   .hero-logo {
     width: min(100%, 430px);
+    height: 290px;
   }
 
   .hero-badge {
@@ -3203,8 +3227,13 @@ a {
 @media (max-width: 480px) {
   .brand-mark {
     width: 118px;
+    height: 54px;
     padding: 4px 7px 6px;
     border-radius: 16px 16px 14px 14px;
+  }
+
+  .brand-mark img {
+    height: 44px;
   }
 
   .bag-button {
@@ -3250,6 +3279,11 @@ a {
 
   .hero-visual {
     min-height: 300px;
+  }
+
+  .hero-logo {
+    width: min(100%, 360px);
+    height: 250px;
   }
 
   .hero-glow {
@@ -3338,6 +3372,11 @@ a {
 
   .footer-logo-card {
     width: 230px;
+    height: 104px;
+  }
+
+  .footer-logo-card img {
+    height: 80px;
   }
 
   .footer-order .btn {

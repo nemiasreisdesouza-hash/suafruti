@@ -4,12 +4,12 @@ Site de cardápio estático, responsivo e com identidade exclusiva da **Suafruti
 
 ## Identidade visual
 
-- **Logo oficial Suafruti** aplicada no cabeçalho, no hero e no rodapé em versão limpa, recortada com transparência suave e sem contorno branco (`assets/logo-suafruti-clean.webp` e `logo-suafruti-clean-compact.webp`), derivada do arquivo oficial em alta resolução.
-- No cabeçalho, a marca ganhou um **selo creme com sombra verde** e o slogan *"O melhor sabor da natureza."* ao lado, reforçando a identidade sem poluir o menu.
-- A versão quadrada da logo enviada pela cliente também está em `assets/logo-oficial-quadrada.jpg` e é usada como imagem de compartilhamento (`og:image`).
-- `styles.css` e `app.js` são carregados com versionamento (`?v=5`) para evitar que o navegador use uma folha de estilo antiga em cache.
+- **Logo oficial Suafruti** carregada diretamente do link enviado pela cliente (`https://i.imgur.com/FsSckKt.jpeg`) no cabeçalho, no hero, no rodapé, no favicon e na imagem de compartilhamento (`og:image` / `twitter:image`). Cada campo tem um contêiner com dimensões próprias e `object-fit: contain`, então a arte é sempre centralizada, sem distorção ou corte, em desktop e mobile.
+- No cabeçalho, a marca ganhou um **selo creme com sombra verde** e o slogan *"O melhor sabor da natureza."* ao lado; no hero e no rodapé a logo usa o mesmo ajuste de proporção e `mix-blend-mode: multiply` para integrar o fundo da arte ao creme/amarelo da interface.
+- Como contingência caso o Imgur esteja indisponível, as versões locais recortadas (`assets/logo-suafruti-clean.webp` e `logo-suafruti-clean-compact.webp`) são aplicadas automaticamente via `data-logo-fallback`; `assets/logo-oficial-quadrada.jpg` e `assets/favicon.png` seguem no repositório como referência e segundo ícone.
+- `styles.css` e `app.js` são carregados com versionamento (`?v=6`) para evitar que o navegador use uma folha de estilo antiga em cache.
 - Fotos reais dos potes extraídas do encarte oficial + imagem exclusiva da caixa com 4 bandejas de morango.
-- Paleta verde/vermelho/amarelo, tipografias locais (Fredoka, Nunito Sans e Pacifico), folhas, ondas e detalhes inspirados no material da cliente. Nenhuma dependência externa em tempo de execução.
+- Paleta verde/vermelho/amarelo, tipografias locais (Fredoka, Nunito Sans e Pacifico), folhas, ondas e detalhes inspirados no material da cliente. Produtos, fontes e estilos são locais; apenas a logo oficial é servida pelo link informado, com fallback local.
 
 ## Cardápio configurado
 
