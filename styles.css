@@ -415,7 +415,9 @@ a {
   display: block;
   width: 100%;
   height: 52px;
-  object-fit: contain;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center 50%;
   mix-blend-mode: multiply;
 }
 
@@ -743,7 +745,7 @@ a {
   aspect-ratio: 1;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 50% 46%, rgba(255, 255, 255, .94) 0 39%, rgba(255, 244, 187, .85) 40% 62%, transparent 69%),
+    radial-gradient(circle at 50% 46%, rgba(255, 249, 214, .96) 0 39%, rgba(255, 244, 187, .85) 40% 62%, transparent 69%),
     conic-gradient(from 20deg, rgba(154, 205, 36, .12), rgba(246, 199, 43, .2), rgba(154, 205, 36, .1), rgba(246, 199, 43, .2), rgba(154, 205, 36, .12));
   filter: blur(.2px);
 }
@@ -757,15 +759,28 @@ a {
   transform: rotate(12deg);
 }
 
-.hero-logo {
+.hero-logo-frame {
   position: relative;
   z-index: 2;
-  width: min(108%, 620px);
-  height: 400px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 24px 24px rgba(73, 84, 24, .16));
+  display: block;
+  box-sizing: border-box;
+  width: min(100%, 540px);
+  height: 390px;
+  padding: 14px;
+  overflow: hidden;
+  border-radius: 34px;
+  background: linear-gradient(160deg, #fffdf3 0%, #fff3c4 100%);
+  box-shadow: 0 22px 46px rgba(73, 84, 24, .18), inset 0 0 0 1px rgba(255, 255, 255, .92);
   animation: hero-float 6s ease-in-out infinite;
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  height: 362px;
+  object-fit: contain;
+  object-position: center 50%;
+  mix-blend-mode: multiply;
 }
 
 @keyframes hero-float {
@@ -2064,8 +2079,8 @@ a {
 .footer-logo-card {
   display: block;
   box-sizing: border-box;
-  width: min(100%, 275px);
-  height: 118px;
+  width: min(100%, 215px);
+  height: 180px;
   padding: 12px 14px;
   border-radius: 22px;
   background: #fff9dc;
@@ -2075,8 +2090,10 @@ a {
 .footer-logo-card img {
   display: block;
   width: 100%;
-  height: 94px;
+  height: 156px;
+  border-radius: inherit;
   object-fit: contain;
+  object-position: center 50%;
   mix-blend-mode: multiply;
 }
 
@@ -2859,9 +2876,13 @@ a {
     min-height: 430px;
   }
 
+  .hero-logo-frame {
+    width: min(100%, 500px);
+    height: 350px;
+  }
+
   .hero-logo {
-    width: min(100%, 520px);
-    height: 340px;
+    height: 322px;
   }
 
   .hero-glow {
@@ -2939,9 +2960,13 @@ a {
     margin-top: 14px;
   }
 
+  .hero-logo-frame {
+    width: min(100%, 420px);
+    height: 300px;
+  }
+
   .hero-logo {
-    width: min(100%, 430px);
-    height: 290px;
+    height: 272px;
   }
 
   .hero-badge {
@@ -3281,9 +3306,15 @@ a {
     min-height: 300px;
   }
 
-  .hero-logo {
-    width: min(100%, 360px);
+  .hero-logo-frame {
+    width: min(100%, 350px);
     height: 250px;
+    padding: 10px;
+    border-radius: 26px;
+  }
+
+  .hero-logo {
+    height: 230px;
   }
 
   .hero-glow {
@@ -3371,12 +3402,12 @@ a {
   }
 
   .footer-logo-card {
-    width: 230px;
-    height: 104px;
+    width: 195px;
+    height: 152px;
   }
 
   .footer-logo-card img {
-    height: 80px;
+    height: 128px;
   }
 
   .footer-order .btn {

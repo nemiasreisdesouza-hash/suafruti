@@ -4,10 +4,10 @@ Site de cardápio estático, responsivo e com identidade exclusiva da **Suafruti
 
 ## Identidade visual
 
-- **Logo oficial Suafruti** carregada diretamente do link enviado pela cliente (`https://i.imgur.com/FsSckKt.jpeg`) no cabeçalho, no hero, no rodapé, no favicon e na imagem de compartilhamento (`og:image` / `twitter:image`). Cada campo tem um contêiner com dimensões próprias e `object-fit: contain`, então a arte é sempre centralizada, sem distorção ou corte, em desktop e mobile.
-- No cabeçalho, a marca ganhou um **selo creme com sombra verde** e o slogan *"O melhor sabor da natureza."* ao lado; no hero e no rodapé a logo usa o mesmo ajuste de proporção e `mix-blend-mode: multiply` para integrar o fundo da arte ao creme/amarelo da interface.
+- **Logo oficial Suafruti** carregada diretamente do link enviado pela cliente (`https://i.imgur.com/iHVVTHH.jpeg`) no cabeçalho, no hero, no rodapé, no favicon e na imagem de compartilhamento (`og:image` / `twitter:image`). Cada campo tem dimensões próprias: o cabeçalho usa `object-fit: cover` num selo compacto para preencher o espaço sem deixar a marca minúscula; o rodapé e o hero usam `object-fit: contain` em cartões creme dimensionados para a arte completa, sem distorção, corte nem caixa branca solta.
+- Os três campos formam uma família de selos creme. `mix-blend-mode: multiply` integra o fundo claro do JPEG ao creme de cada selo, e `overflow: hidden` no cartão do hero recorta as bordas retas da imagem. O resultado é intencional, sem efeito de remendo, em desktop e mobile.
 - Como contingência caso o Imgur esteja indisponível, as versões locais recortadas (`assets/logo-suafruti-clean.webp` e `logo-suafruti-clean-compact.webp`) são aplicadas automaticamente via `data-logo-fallback`; `assets/logo-oficial-quadrada.jpg` e `assets/favicon.png` seguem no repositório como referência e segundo ícone.
-- `styles.css` e `app.js` são carregados com versionamento (`?v=6`) para evitar que o navegador use uma folha de estilo antiga em cache.
+- `styles.css` e `app.js` são carregados com versionamento (`?v=7`) para evitar que o navegador use uma folha de estilo antiga em cache.
 - Fotos reais dos potes extraídas do encarte oficial + imagem exclusiva da caixa com 4 bandejas de morango.
 - Paleta verde/vermelho/amarelo, tipografias locais (Fredoka, Nunito Sans e Pacifico), folhas, ondas e detalhes inspirados no material da cliente. Produtos, fontes e estilos são locais; apenas a logo oficial é servida pelo link informado, com fallback local.
 
