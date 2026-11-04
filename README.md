@@ -4,12 +4,12 @@ Site de cardápio estático, responsivo e com identidade exclusiva da **Suafruti
 
 ## Identidade visual
 
-- **Logo oficial Suafruti** carregada diretamente do link enviado pela cliente (`https://i.imgur.com/iHVVTHH.jpeg`) no cabeçalho, no hero, no rodapé, no favicon e na imagem de compartilhamento (`og:image` / `twitter:image`). Cada campo tem dimensões próprias: o cabeçalho usa `object-fit: cover` num selo compacto para preencher o espaço sem deixar a marca minúscula; o rodapé e o hero usam `object-fit: contain` em cartões creme dimensionados para a arte completa, sem distorção, corte nem caixa branca solta.
-- Os três campos formam uma família de selos creme. `mix-blend-mode: multiply` integra o fundo claro do JPEG ao creme de cada selo, e `overflow: hidden` no cartão do hero recorta as bordas retas da imagem. O resultado é intencional, sem efeito de remendo, em desktop e mobile.
-- Como contingência caso o Imgur esteja indisponível, as versões locais recortadas (`assets/logo-suafruti-clean.webp` e `logo-suafruti-clean-compact.webp`) são aplicadas automaticamente via `data-logo-fallback`; `assets/logo-oficial-quadrada.jpg` e `assets/favicon.png` seguem no repositório como referência e segundo ícone.
-- `styles.css` e `app.js` são carregados com versionamento (`?v=7`) para evitar que o navegador use uma folha de estilo antiga em cache.
+- **Logo oficial Suafruti sem fundo preto.** A arte do link enviado (`https://i.imgur.com/iHVVTHH.jpeg`) vinha com fundo preto sólido; o recorte foi tratado localmente e virou `assets/logo-suafruti-transparente.webp` (WebP com canal alpha, versão 2× para telas retina). O fundo preto foi removido por recorte de contorno, preservando frutas, brilhos e a faixa "O melhor sabor da natureza.".
+- A logo agora **se adapta ao layout**: transparente, flutua sobre o brilho circular do hero com sombra suave e animação, preenche o selo compacto do cabeçalho via `object-fit: cover` e aparece inteira, sem cartão ou moldura, sobre o verde do rodapé. Nenhum campo usa `mix-blend-mode` ou moldura creme — não há mais mancha preta nem efeito de remendo.
+- `assets/favicon.png` e `assets/logo-social.jpg` (1200×630 para `og:image` / `twitter:image`) foram gerados a partir do mesmo recorte, com fundo creme da marca; `assets/logo-oficial-quadrada.jpg` e `assets/logo-oficial-original.jpg` seguem como referência do material original.
+- `styles.css` e `app.js` são carregados com versionamento (`?v=8`) para evitar que o navegador use uma folha de estilo antiga em cache.
 - Fotos reais dos potes extraídas do encarte oficial + imagem exclusiva da caixa com 4 bandejas de morango.
-- Paleta verde/vermelho/amarelo, tipografias locais (Fredoka, Nunito Sans e Pacifico), folhas, ondas e detalhes inspirados no material da cliente. Produtos, fontes e estilos são locais; apenas a logo oficial é servida pelo link informado, com fallback local.
+- Paleta verde/vermelho/amarelo, tipografias locais (Fredoka, Nunito Sans e Pacifico), folhas, ondas e detalhes inspirados no material da cliente. **Nenhuma dependência externa em tempo de execução.**
 
 ## Cardápio configurado
 
