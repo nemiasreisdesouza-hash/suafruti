@@ -42,7 +42,7 @@
   --shadow-md: 0 18px 45px rgba(21, 74, 35, .13);
   --shadow-lg: 0 28px 70px rgba(9, 55, 25, .2);
   --container: 1180px;
-  --header-h: 84px;
+  --header-h: 104px;
 }
 
 *,
@@ -387,37 +387,18 @@ a {
 .brand-mark {
   position: relative;
   z-index: 1;
+  flex: none;
   display: block;
-  box-sizing: border-box;
-  width: 168px;
-  height: 64px;
-  padding: 5px 9px;
-  border-radius: 20px 20px 17px 17px;
-  background: linear-gradient(180deg, #fffdf4 0%, #fff4c9 100%);
-  box-shadow: 0 7px 18px rgba(21, 74, 35, .14), inset 0 0 0 1px rgba(255, 255, 255, .8);
-}
-
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  right: -9px;
-  bottom: -6px;
-  left: -9px;
-  height: 17px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, var(--green-700), var(--lime));
-  transform: rotate(-1.5deg);
-  opacity: .92;
+  line-height: 0;
 }
 
 .brand-mark img {
   display: block;
-  width: 100%;
-  height: 52px;
-  border-radius: inherit;
-  object-fit: cover;
-  object-position: center 50%;
+  width: auto;
+  height: calc(var(--header-h) - 10px);
+  max-width: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(24, 76, 34, .16));
 }
 
 .brand-tagline {
@@ -758,11 +739,15 @@ a {
   transform: rotate(12deg);
 }
 
-.hero-logo {
+.hero-logo-wrap {
   position: relative;
   z-index: 2;
-  display: block;
   width: min(100%, 410px);
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
   height: auto;
   filter: drop-shadow(0 24px 26px rgba(73, 84, 24, .18));
   animation: hero-float 6s ease-in-out infinite;
@@ -809,8 +794,8 @@ a {
 }
 
 .badge-pote {
-  right: -1%;
-  bottom: 15%;
+  right: 0;
+  bottom: -116px;
   border: 6px solid var(--white);
   background: var(--yellow);
   color: var(--green-950);
@@ -2684,17 +2669,12 @@ a {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
+  :root {
+    --header-h: 96px;
+  }
+
   .brand-tagline {
     display: none;
-  }
-
-  .brand-mark {
-    width: 150px;
-    height: 60px;
-  }
-
-  .brand-mark img {
-    height: 50px;
   }
 
   .nav a {
@@ -2752,16 +2732,7 @@ a {
 
 @media (max-width: 900px) {
   :root {
-    --header-h: 72px;
-  }
-
-  .brand-mark {
-    width: 140px;
-    height: 58px;
-  }
-
-  .brand-mark img {
-    height: 48px;
+    --header-h: 88px;
   }
 
   .header-inner {
@@ -2851,7 +2822,7 @@ a {
     min-height: 430px;
   }
 
-  .hero-logo {
+  .hero-logo-wrap {
     width: min(100%, 380px);
   }
 
@@ -2868,7 +2839,7 @@ a {
   }
 
   .badge-pote {
-    right: 5%;
+    bottom: -115px;
   }
 
   .leaf-hero-3 {
@@ -2890,6 +2861,10 @@ a {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --header-h: 80px;
+  }
+
   .container {
     width: min(calc(100% - 32px), var(--container));
   }
@@ -2930,7 +2905,7 @@ a {
     margin-top: 14px;
   }
 
-  .hero-logo {
+  .hero-logo-wrap {
     width: min(100%, 340px);
   }
 
@@ -2953,8 +2928,8 @@ a {
   }
 
   .badge-pote {
-    right: 1%;
-    bottom: 10%;
+    right: 0;
+    bottom: -88px;
   }
 
   .hero-wave svg {
@@ -3215,15 +3190,8 @@ a {
 }
 
 @media (max-width: 480px) {
-  .brand-mark {
-    width: 118px;
-    height: 54px;
-    padding: 4px 7px 6px;
-    border-radius: 16px 16px 14px 14px;
-  }
-
-  .brand-mark img {
-    height: 44px;
+  :root {
+    --header-h: 72px;
   }
 
   .bag-button {
@@ -3271,8 +3239,13 @@ a {
     min-height: 300px;
   }
 
-  .hero-logo {
+  .hero-logo-wrap {
     width: min(100%, 290px);
+  }
+
+  .badge-pote {
+    right: 0;
+    bottom: -78px;
   }
 
   .hero-glow {
